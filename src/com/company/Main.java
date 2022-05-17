@@ -10,7 +10,6 @@ public class Main {
         GUImain gui = new GUImain();
         System.out.println("Finished.");
         //instantiate an array
-        int[] arr = new int[]{1,2,3,4,5};
 
     }
 }
