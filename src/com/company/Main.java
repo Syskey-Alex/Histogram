@@ -1,6 +1,8 @@
 package com.company;
 
 import java.lang.reflect.Array;
+import java.util.Arrays;
+
 
 public class Main {
 
@@ -10,6 +12,5 @@ public class Main {
         GUImain gui = new GUImain();
         System.out.println("Finished.");
         //instantiate an array
-
     }
 }

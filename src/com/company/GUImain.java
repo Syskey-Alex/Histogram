@@ -1,5 +1,4 @@
 package com.company;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -26,7 +25,9 @@ public class GUImain extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("Graph results")) {
             System.out.println("click");
-            Basic test = new Basic(300,300);
+            int[] temp = {1,2,3,4,5,6,7,8,9,10,11,12,13};
+            Histogram test = new Histogram(temp,7);
+
         }
     }
 }
