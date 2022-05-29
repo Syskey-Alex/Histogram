@@ -12,9 +12,10 @@ public class Histogram extends JPanel {
         this.arraySize = arraySize;
         this.intArray = new int[arraySize];
         intArray = iArray;
-        // initialise the window
+        //make window
         frame = new JFrame("Demo");
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        //make for loop that is able to reiterate through the rectangles and check the max height.
         for (int x = 0; x < arraySize; x++) {
             if (intArray[x] * 10 > maxSize) {
                 maxSize = intArray[x] * 10;
@@ -22,24 +23,28 @@ public class Histogram extends JPanel {
         }
         frame.setSize(300, 300);
 
-        // create the canvas that will hold the actual graphics
+        //holds actual graph
         frame.getContentPane().add(this);
 
-        // display the frame AFTER adding the panel to prevent drawing glitches
+        //prevents glitches if displayed after all frames
         frame.setVisible(true);
     }
 
     @Override
     public void paintComponent(Graphics g) {
-        int left;    // hard-coded just for testing
-        int top = maxSize; //the top of tallest rectangle is top of the window
+        //hardcoded variables to test data
+        int left;   
+        //top of graph is the biggest size the rectangle can reach
+        int top = maxSize; 
         int width = 40;
         int height;
         g.setColor(Color.red);
-        //g.fillRect(left, top, width, height);
+        
+        
         for (int x = 0; x < arraySize; x++) {
-            left = x * 50; //point of each rectangle is equally split
-            height = intArray[x] * 10; //scaling up the int values for gui
+            left = x * 50; 
+            height = intArray[x] * 10; 
+            //do top - height for graph to be correct way around
             g.fillRect(left, top - height, width, height);
 
         }
